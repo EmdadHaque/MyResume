@@ -1,3 +1,5 @@
 theme: jekyll-theme-minimal
 title: My Resume
 description: As the title suggests, a summary of my career goals, experiences, projects, specialties and interests.
+logo: /assets/img/LinkedIn-Photo.jpeg
+show_downloads: true
