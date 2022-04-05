@@ -1,5 +1,3 @@
-## EMDAD HAQUE
-
 ### Career Profile
 
 - 10+ years of **IT Systems Administration & Support experience** in deploying, managing and troubleshooting servers & workstations, OS & custom software, IT security, printing, storage, backup & networking solutions. 
