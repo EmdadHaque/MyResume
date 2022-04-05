@@ -20,12 +20,7 @@
 
 - **Networking know-how** - Cisco CCNA and CCNP certified network engineer, accustomed with configuring routing, switching, firewalls, ACLs, proxies and IP telephones.
 
-
-
-
-
-
-
+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 You can use the [editor on GitHub](https://github.com/EmdadHaque/MyResume/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
