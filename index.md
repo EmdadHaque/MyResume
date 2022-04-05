@@ -3,7 +3,9 @@
 
 - 10+ years of **IT Systems Administration & Support experience** in deploying, managing and troubleshooting servers & workstations, OS & custom software, IT security, printing, storage, backup & networking solutions. 
 
-- **Certifications** - Microsoft MCSE MCSA MCP, AWS Solutions Architect Associate, Linux Foundation System Admin LFCSA, Vmware VCP-DCV, Cisco CCNA + CCNP **[click to view summary of certifications](https://www.credly.com/users/md-emdadul-haque/badges?sort=-state_updated_at){:target="_blank"}**
+- **Certifications** - Microsoft MCSE MCSA MCP, AWS Solutions Architect Associate, Linux Foundation System Admin LFCSA, Vmware VCP-DCV, Cisco CCNA + CCNP 
+
+    **[Click to view summary of certifications](https://www.credly.com/users/md-emdadul-haque/badges?sort=-state_updated_at){:target="_blank"}**
 
     Currently upskilling on Azure administration as well as DevOps tools (Ansible, Terraform, Jenkins, Docker and Kubernetes).
 
