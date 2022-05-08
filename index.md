@@ -1,7 +1,7 @@
 
 ### Career Profile
 
-- 10+ years of **IT Systems Administration & Support experience** in designing, managing and troubleshooting on-prem and cloud environments involving servers & workstations, OS & custom software, IT security, printing, storage, backup & networking solutions. 
+- 10+ years of **IT Systems Administration & Support experience** in designing, managing and troubleshooting on -prem and cloud environments involving Windows/Linux servers & workstations, virtualisation, custom software, IT security, printing, storage, backup & networking solutions. 
 
 - **Certifications** - Microsoft MCSE MCSA MCP, AWS Solutions Architect Associate, Linux Foundation System Admin LFCSA, Vmware VCP-DCV, Cisco CCNA + CCNP 
 
@@ -9,7 +9,7 @@
 
     Currently, upskilling on CI/CD and IaC DevOps tools (Ansible, Terraform, Jenkins, Docker and Kubernetes).
 
-- **Infrastructure & virtualization expert** - Proficient in Active Directory, Group Policy, DNS, DHCP, ADFS, PKI Certificates, SCCM SOE Imaging + app packaging, MDM, storage (SAN / NAS) & backup (Rubrik) systems, networking and virtualization (VMware / Hyper-V). 
+- **Infrastructure & virtualisation expert** - Proficient in Active Directory, Group Policy, DNS, DHCP, ADFS, PKI Certificates, SCCM SOE Imaging + app packaging, MDM, storage (SAN / NAS) & backup (Rubrik) systems, networking and virtualisation (VMware / Hyper-V). 
 
 - **Cloud technologist** - Experienced with administration of AWS & Azure cloud infrastructure plus GCP WS & Office365 including Azure AD, Exchange OL, SharePoint OL, Teams, SSO, MFA plus migrations and on-prem sync.
 
