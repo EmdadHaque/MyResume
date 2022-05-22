@@ -1,9 +1,10 @@
 
-### Project Portfolio
+## PROJECT PORTFOLIO
 
-**[Click to view my project portfolio](./projects){:target="_blank"}**
+**[Click to view my project portfolio](./projects)**
 
-### Career Profile
+
+## CAREER PROFILE
 
 - 10+ years of **IT Systems Administration & Support experience** in designing, managing and troubleshooting on-prem and cloud environments involving Windows/Linux servers & workstations, virtualisation, custom software, IT security, printing, storage, backup & networking solutions. 
 
