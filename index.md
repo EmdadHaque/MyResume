@@ -1,6 +1,4 @@
 
-<title>Career Profile | EMDAD HAQUE</title>
-
 ## PROJECT PORTFOLIO
 
 - **[Click to view my project portfolio](./projects)**
