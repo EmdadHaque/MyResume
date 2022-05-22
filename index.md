@@ -1,5 +1,5 @@
 ---
-title: My custom title
+title: Career Profile
 ---
 
 ## PROJECT PORTFOLIO
