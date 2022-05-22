@@ -2,7 +2,7 @@
 ## PROJECT PORTFOLIO
 
 **[Click to view my project portfolio](./projects)**
-
+<br />
 
 ## CAREER PROFILE
 
