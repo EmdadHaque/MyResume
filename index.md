@@ -1,3 +1,6 @@
+---
+title: My custom title
+---
 
 ## PROJECT PORTFOLIO
 
@@ -7,7 +10,7 @@
 
 ## CAREER PROFILE
 
-- 10+ years of **IT Systems Administration & Support experience** in designing, managing and troubleshooting on-prem and cloud environments involving Windows/Linux servers & workstations, virtualisation, custom software, IT security, printing, storage, backup & networking solutions. 
+- 10+ years of **IT Systems Administration & Support experience** in designing, managing and troubleshooting on-prem and cloud infrastructure involving Windows/Linux servers & workstations, virtualisation, custom software, IT security, printing, storage, backup & networking solutions. 
 
 - **Certifications** - Microsoft MCSE MCSA MCP, AWS Solutions Architect Associate, Linux Foundation System Admin LFCSA, Vmware VCP-DCV, Cisco CCNA + CCNP 
 
