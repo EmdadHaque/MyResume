@@ -18,9 +18,9 @@ title: Career Profile
 |![](./assets/img/1_LFCS-600x600.png)   |![](./assets/img/AWS-SolArchitect-Associate-2020.png)   |![](./assets/img/cisco_ccna_R_26S.png)   |![](./assets/img/cisco_ccnp_R_26S.png)   |![](./assets/img/MCSA-Windows_Server_2016.png)   |![](./assets/img/MCSE-Core_Infrastructure.png)   |![](./assets/img/vmware_Cert_P_DCV6.5.png)   |
 |---|---|---|---|---|---|---|
 
-    **[Click to view summary of certifications](https://www.credly.com/users/md-emdadul-haque/badges?sort=-state_updated_at){:target="_blank"}**
+**[Click to view summary of certifications](https://www.credly.com/users/md-emdadul-haque/badges?sort=-state_updated_at){:target="_blank"}**
 
-    Currently, upskilling on CI/CD and IaC DevOps tools (Ansible, Terraform, Jenkins, Docker and Kubernetes).
+Currently, upskilling on CI/CD and IaC DevOps tools (Ansible, Terraform, Jenkins, Docker and Kubernetes).
 
 - **Infrastructure & virtualisation expert** - Proficient in Active Directory, Group Policy, DNS, DHCP, ADFS, PKI Certificates, SCCM SOE Imaging + app packaging, MDM, storage (SAN / NAS) & backup (Rubrik) systems, networking and virtualisation (VMware / Hyper-V). 
 
