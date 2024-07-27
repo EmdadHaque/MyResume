@@ -13,7 +13,11 @@ title: Career Profile
 - 10+ years of **IT Systems Administration & Support experience** in designing, managing and troubleshooting on-prem and cloud infrastructure involving Windows/Linux servers & workstations, virtualisation, custom software, IT security, printing, storage, backup & networking solutions. 
 
 - **Certifications** - AWS Solutions Architect Associate, Microsoft MCSE MCSA MCP, Azure Adminstrator Associate, Linux Foundation System Admin LFCSA, Vmware VCP-DCV, Cisco CCNA + CCNP 
-![](./assets/img/1_LFCS-600x600.png)
+
+
+|![](./assets/img/1_LFCS-600x600.png)   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|
+
     **[Click to view summary of certifications](https://www.credly.com/users/md-emdadul-haque/badges?sort=-state_updated_at){:target="_blank"}**
 
     Currently, upskilling on CI/CD and IaC DevOps tools (Ansible, Terraform, Jenkins, Docker and Kubernetes).
