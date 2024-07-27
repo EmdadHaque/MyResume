@@ -14,9 +14,7 @@ title: Career Profile
 
 - **Certifications** - AWS Solutions Architect Associate, Microsoft MCSE MCSA MCP, Azure Adminstrator Associate, Linux Foundation System Admin LFCSA, Vmware VCP-DCV, Cisco CCNA + CCNP 
 
-
-
-![](./assets/img/1_LFCS-600x600.png)  ![](./assets/img/AWS-SolArchitect-Associate-2020.png)  ![](./assets/img/cisco_ccna_R_26S.png)  ![](./assets/img/cisco_ccnp_R_26S.png)  ![](./assets/img/MCSA-Windows_Server_2016.png)  ![](./assets/img/MCSE-Core_Infrastructure.png)  ![](./assets/img/vmware_Cert_P_DCV6.5.png) 
+    ![](./assets/img/1_LFCS-600x600.png)  ![](./assets/img/AWS-SolArchitect-Associate-2020.png)  ![](./assets/img/cisco_ccna_R_26S.png)  ![](./assets/img/cisco_ccnp_R_26S.png)  ![](./assets/img/MCSA-Windows_Server_2016.png)  ![](./assets/img/MCSE-Core_Infrastructure.png)  ![](./assets/img/vmware_Cert_P_DCV6.5.png) 
 
 
 
