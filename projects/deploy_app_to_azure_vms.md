@@ -1,5 +1,5 @@
 
-## Automate the deployment of applications to Azure Windows Virtual Machines
+# Automate the deployment of applications to Azure Windows Virtual Machines
 _Date: 10 Oct 2024_
 
 **Aim**: To install applications on Windows VMs in Azure via scripts in the absence of any configuration management tools.   
@@ -20,8 +20,8 @@ _Date: 10 Oct 2024_
 
    - **Group Policy** => needs VMs to be added to AD.
 
-
-### Using Run Commands 
+&nbsp;
+## Using Run Commands 
 
    - Set up a VM to run the PowerShell script that will trigger the Run Command scripts in required VMs
    
@@ -30,3 +30,5 @@ _Date: 10 Oct 2024_
    - Create PowerShell script to trigger Run Command
 
    - Create Script that will download the installer from the Storage account and run the installer
+
+   
