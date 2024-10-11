@@ -12,7 +12,7 @@ _Date: 10 Oct 2024_
 
    - **Run Commands** => this was the quickest and the modern way of doing it at the time of writing.
 
-   - **Custom Script Extension** => this is the same as using older way of doing it.
+   - **Custom Script Extension** => this is an older way of doing it at the time of writing.
 
    - **Azure Automation Runbooks** => this is the same as using Run Commands but your script is running in Azure's Automation account instead of from your own VM.
 
@@ -29,4 +29,4 @@ _Date: 10 Oct 2024_
 
    - Create PowerShell script to trigger Run Command
 
-   - Create Script that will download the  
+   - Create Script that will download the installer from the Storage account and run the installer
