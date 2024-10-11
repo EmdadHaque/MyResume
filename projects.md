@@ -10,7 +10,7 @@
    4. Dynamo DB for storing data
 
 &nbsp;
-- **[Automate the deployment of applications to Azure Windows Virtual Machines](./projects/deploy_app_to_azure_vms){:target="_blank"}**
+- **[Automate the deployment of applications to Azure Windows Virtual Machines](./projects/deploy_app_to_azure_vms)**
 
    This is a project that aims to install applications on Windows VMs in Azure via PowerShell scripts in the absence of any configuration management tools.
 
