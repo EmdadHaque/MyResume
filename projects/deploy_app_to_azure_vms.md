@@ -56,13 +56,17 @@ I have discussed these options in more details below. I have curated the steps f
       - For the **version number** use the version in the dot format (e.g. 2.4.08). 
       - For the **source application package**, use the SAS URL for the MSI file from the Storage Account. 
       - For the **install script**, use the sample command below. The move command is used to rename the downloaded MSI file as it is downloaded as the application name instead of the MSI file name:
-      ```CMD
+
+      ```Shell
       move .\\7zip .\\7zip_2408.msi & start /wait %windir%\\system32\\msiexec.exe /i 7zip_2408.msi /quiet /norestart /L*V 7zip_2408_install.log
       ```
+
       - For the **uninstall script** use the sample command below:
-      ```CMD
+
+      ```Shell
       msiexec.exe /x {23170F69-40C1-2702-2408-000001000000} /quiet /norestart /L*V 7zip_2408_uninstall.log
       ```
+
    6. Once the App Version is created, browse to a running VM in the same region as the Application.  
       - Select Extensions and Applications > VM Applications > Add Application > Select the app (7zip and it's version) and click Save.
    
@@ -76,7 +80,7 @@ Under the same path, you will find the "Downloads" folder which holds the downlo
 
 Lastly, this is fine if you wish to deploy apps to a handful of VMs, owever for a larger deployment you can use a PowerShell script to assign the VM App to as many VMs as you desire. 
 
-```PS
+```PowerShell
 
 #############################################################################################
 # Assign a VM app to all VMs in a Sub  
@@ -175,7 +179,7 @@ Steps:
 
    1. Run this PowerShell cmdlet below to trigger a Run Command on a VM:
 
-```PS
+```PowerShell
 
 #############################################################################################
 # Set Run Cmd that will run script in VM
@@ -206,7 +210,7 @@ Set-AzVMRunCommand `
 
    2. The Run Command will run the below PowerShell script which downloads the installer from the Storage account and runs the installer.
 
-```PS
+```PowerShell
 
 #############################################################################################
 # Install MSI and uses time-limited SAS token 
