@@ -234,7 +234,6 @@ Get-AzStorageBlobContent -Container $containerName -Blob $msiBlobName -Destinati
 
 # Install the MSI file
 Start-Process msiexec.exe -ArgumentList "/i $localMsiPath /quiet /norestart" -Wait
-
 ```
 
 
@@ -246,3 +245,6 @@ Hope this was useful.
 
 I aim to add information on using Azure Automation Runbooks and Custom Script Extensions to deploy apps in a future update.
 
+&nbsp;
+
+[Back to Project List](./) &emsp; &emsp; &emsp; [Back to Top](#top)
