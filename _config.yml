@@ -1,9 +1,6 @@
 theme: jekyll-theme-minimal
 
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+highlighter: rouge
 
 
 title: EMDAD HAQUE
