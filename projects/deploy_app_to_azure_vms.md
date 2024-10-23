@@ -208,7 +208,7 @@ Set-AzVMRunCommand `
 -SourceScript "id; echo HelloWorld"
 ```
 
-   2. The Run Command will run the below PowerShell script which downloads the installer from the Storage account and runs the installer.
+2. The Run Command will run the below PowerShell script which downloads the installer from the Storage account and runs the installer.
 
 ```powershell
 
