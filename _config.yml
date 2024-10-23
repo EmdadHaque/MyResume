@@ -1,5 +1,11 @@
 theme: jekyll-theme-minimal
 
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+
 title: EMDAD HAQUE
 description: ABOUT ME
 logo: ./assets/img/LinkedIn-Photo.jpeg
