@@ -57,15 +57,13 @@ I have discussed these options in more details below. I have curated the steps f
       - For the **source application package**, use the SAS URL for the MSI file from the Storage Account. 
       - For the **install script**, use the sample command below. The move command is used to rename the downloaded MSI file as it is downloaded as the application name instead of the MSI file name:
 
-      ```ruby
+      ```shell
       move .\\7zip .\\7zip_2408.msi & start /wait %windir%\\system32\\msiexec.exe /i 7zip_2408.msi /quiet /norestart /L*V 7zip_2408_install.log
-
-      GitHubPages::Dependencies.gems.each do |gem, version|
       ```
 
       - For the **uninstall script** use the sample command below:
 
-      ```sh
+      ```shell
       msiexec.exe /x {23170F69-40C1-2702-2408-000001000000} /quiet /norestart /L*V 7zip_2408_uninstall.log
       ```
 
@@ -82,7 +80,7 @@ Under the same path, you will find the "Downloads" folder which holds the downlo
 
 Lastly, this is fine if you wish to deploy apps to a handful of VMs, owever for a larger deployment you can use a PowerShell script to assign the VM App to as many VMs as you desire. 
 
-```pwsh
+```powershell
 
 #############################################################################################
 # Assign a VM app to all VMs in a Sub  
@@ -181,7 +179,7 @@ Steps:
 
    1. Run this PowerShell cmdlet below to trigger a Run Command on a VM:
 
-```ps
+```powershell
 
 #############################################################################################
 # Set Run Cmd that will run script in VM
