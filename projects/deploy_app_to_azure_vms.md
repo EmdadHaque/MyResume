@@ -68,13 +68,13 @@ I have discussed these options in more details below as well as curated the step
       ```
 
    6. Once the App Version is created, browse to a running VM in the same region as the Application.  
-      - Select `Extensions and Applications` > `VM Applications` > `Add Application` > Select the app (7zip and it's version) and click Save.
+      - Select _Extensions and Applications_ > _VM Applications_ > _Add Application_ > Select the app (7zip and it's version) and click Save.
    
 ---
 
-You will see that for the first VM app, the `VMAppExtension` is installed. You can check the `C:\Packages\Plugins\Microsoft.CPlat.Core.VMApplicationManagerWindows` for the VM Application Extension installation. 
+You will see that when the first VM app is added, the _VMAppExtension_ VM Extension is installed. You can log into the VM and check the _C:\Packages\Plugins\Microsoft.CPlat.Core.VMApplicationManagerWindows_ for the VM Application Extension installation. 
 
-Under the same path, you will find the `Downloads` folder which holds the downloaded MSI files and its corresponding log file.
+Under the same path, you will find the _Downloads_ folder which holds the downloaded MSI files and corresponding log files.
 
 This manual triggering is fine if you wish to deploy apps to a handful of VMs, however for a larger deployment you can use a PowerShell script to assign the VM App to as many VMs as you desire. 
 
