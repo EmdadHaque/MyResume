@@ -1,4 +1,8 @@
 .wide-wrapper {
-    width: 1150px;
+    width: 960px;
     margin: 0 auto
+}
+
+section {
+    width: 600px;
 }
