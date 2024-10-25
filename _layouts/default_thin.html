@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% seo %}
-
-    {% include wide.html %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    {% include head-custom.html %}
   </head>
   <body style="padding-top: 0px;">
     <div class="wrapper" style="text-align: justify;">
@@ -19,35 +22,34 @@
         {% endif %}
 
         <p>{{ site.description | default: site.github.project_tagline }} &#x1F60E;</p>
-       
+        
         <p class="view" style="font-style: italic;">
           I am an IT Generalist. My interests span from code development to networking 
           to operations management for on-prem private clouds and public clouds and everything in between.   
-          <br>
+        </br>
+        </br>
+          I have a passion for learning and always on the lookout for the next upcoming technology to tinker with.
+        </br>
+        </br>
+          I love Star Trek as much as Star Wars! In my free time, I am gaming if I am not reading or watching TV. 
         </p>
 
         <p class="view">
           <b>View my career history on <a href="https://www.linkedin.com/in/emdadulhaque/" target="_blank">LinkedIn</a></b> 
-          <br>
           <b>Download my Résumé: </b><a href="https://drive.google.com/file/d/1xIuuB3QAUMlRqmtAdEjqkggOo4HpX6AC/view?usp=sharing" target="_blank">pdf - </a> <a href="https://docs.google.com/document/d/1xDItJ8AyCsOY18lIJFbZRwLUeW2ndnTe/edit?usp=sharing&ouid=106421337501615170664&rtpof=true&sd=true" target="_blank">doc</a>
         </p>
       </header>
       
       <a name="top"></a>
 
-      <section style="padding: 50px 20px;">
+      <section style="padding-top: 50px;">
 
       {{ content }}
 
       </section>
 
       <footer>
-        <!-- 
-          {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %} 
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-        -->
+
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
