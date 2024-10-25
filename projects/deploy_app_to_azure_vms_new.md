@@ -1,3 +1,6 @@
+---
+layout: default_new
+---
 
 
 ## Automate the deployment of applications to Azure Windows Virtual Machines
