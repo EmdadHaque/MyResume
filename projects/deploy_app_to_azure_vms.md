@@ -4,9 +4,9 @@ _Date: 10 Oct 2024_
 
 **Aim**: To install applications on Windows VMs in Azure via scripts in the absence of any configuration management tools.   
 
-**Scenario**: The environment has multiple Windows **VMs in Azure which are not being managed by any Configuration Management tools**, most are also **not connected to AD**. 
+**Scenario**: The environment has multiple Windows VMs in Azure which are not being managed by any Configuration Management tools, most are also not connected to AD. 
 
-**Requirement**: Deploy an agent (with an MSI installer) to these VMs in an automated way instead of logging into each VM and manually installing.
+**Requirement**: Deploy an app to the Azure VMs in an automated way instead of logging into each VM and manually installing the app.
 
 **Research**: 
 
@@ -32,11 +32,11 @@ There are several ways to do this:
 
 &nbsp; 
 
-I have discussed these options in more details below. I have curated the steps for installing 7zip app via its MSI as an example.
+I have discussed these options in more details below as well as curated the steps for installing the 7zip app via its MSI as an example.
 
 &nbsp;
 
-## VM Applications
+## Using VM Applications
 
    Prerequisites: 
 
@@ -46,7 +46,7 @@ I have discussed these options in more details below. I have curated the steps f
    
    1. From the Azure Portal, browse to your Storage Account and upload the MSI file to a container as a Block Blob.
    
-   2. Generate a SAS for the MSI file's blob with "Read" permissions and an appropriate time duration. Take a note of the generated SAS URL.
+   2. Generate a **SAS** for the MSI file's blob with "Read" permissions and an appropriate time duration. Take a note of the generated SAS URL.
 
    3. Open **Azure Compute Gallery** and create a Compute Gallery. The Compute Gallery is used to contain the application definition and versions.
 
@@ -68,17 +68,15 @@ I have discussed these options in more details below. I have curated the steps f
       ```
 
    6. Once the App Version is created, browse to a running VM in the same region as the Application.  
-      - Select Extensions and Applications > VM Applications > Add Application > Select the app (7zip and it's version) and click Save.
+      - Select `Extensions and Applications` > `VM Applications` > `Add Application` > Select the app (7zip and it's version) and click Save.
    
 ---
 
-You will see that for the first VM app, the VMAppExtension is installed. You can check the C:\Packages\Plugins\Microsoft.CPlat.Core.VMApplicationManagerWindows for the VM Application Extension installation. 
+You will see that for the first VM app, the `VMAppExtension` is installed. You can check the `C:\Packages\Plugins\Microsoft.CPlat.Core.VMApplicationManagerWindows` for the VM Application Extension installation. 
 
-Under the same path, you will find the "Downloads" folder which holds the downloaded MSI files and its corresponding log file.
+Under the same path, you will find the `Downloads` folder which holds the downloaded MSI files and its corresponding log file.
 
---- 
-
-Lastly, this is fine if you wish to deploy apps to a handful of VMs, owever for a larger deployment you can use a PowerShell script to assign the VM App to as many VMs as you desire. 
+This manual triggering is fine if you wish to deploy apps to a handful of VMs, however for a larger deployment you can use a PowerShell script to assign the VM App to as many VMs as you desire. 
 
 ```powershell
 
@@ -163,10 +161,11 @@ ForEach ($Subscription in $Subscriptions)
 }
 ```
 
+---
 
 &nbsp;
 
-## Run Commands 
+## Using Run Commands 
 
 Prerequisites: 
 
@@ -178,6 +177,7 @@ Prerequisites:
 Steps:
 
    1. Run this PowerShell cmdlet below to trigger a Run Command on a VM:
+   
 
 ```powershell
 
@@ -208,7 +208,8 @@ Set-AzVMRunCommand `
 -SourceScript "id; echo HelloWorld"
 ```
 
-2. The Run Command will run the below PowerShell script which downloads the installer from the Storage account and runs the installer.
+
+   2. The Run Command will run the below PowerShell script which downloads the installer from the Storage account and runs the installer.
 
 ```powershell
 
