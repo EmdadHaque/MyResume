@@ -493,7 +493,7 @@ strong {
 section {
     width: 700px;
     float: right;
-    padding-bottom: 50px
+    padding: 50px, 20px, 0px, 0px
 }
 
 small {
@@ -588,18 +588,3 @@ footer {
         color: #444
     }
 }
-
-
-
-
-/* 
-.wrapper {
-    width: 1060px;
-    margin: 0 auto
-}
-
-section {
-    width: 700px;
-} 
-*/
-
