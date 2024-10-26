@@ -16,6 +16,7 @@ title: Career Profile
 
      **[Click here to view certification verifications on Credly](https://www.credly.com/users/md-emdadul-haque/badges?sort=-state_updated_at){:target="_blank"}**
 
+     <div class="image-row">
      ![](./assets/img/azure-administrator-associate-600x600.png)
      ![](./assets/img/AWS-SolArchitect-Associate-2020.png)
      ![](./assets/img/1_LFCS-600x600.png)
@@ -24,6 +25,7 @@ title: Career Profile
      ![](./assets/img/vmware_Cert_P_DCV6.5.png)
      ![](./assets/img/MCSA-Windows_Server_2016.png)
      ![](./assets/img/MCSE-Core_Infrastructure.png)
+     </div>
 
 - **Infrastructure & virtualisation expert** - Proficient in Active Directory (AD), Group Policy, DNS, DHCP, ADFS, PKI Certificates, SCCM SOE Imaging + app packaging, MDM (AirWatch, MaaS360), storage (SAN / NAS) & backup (Rubrik) systems, networking and virtualisation (VMware / Hyper-V). 
 

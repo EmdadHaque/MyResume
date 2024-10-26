@@ -409,6 +409,11 @@ img {
     max-width: 100%
 }
 
+.image-row {
+    display: flex;
+    justify-content: space-between;
+}
+
 kbd {
     background-color: #fafbfc;
     border: 1px solid #c6cbd1;
