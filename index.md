@@ -19,12 +19,12 @@ title: Career Profile
      ![](./assets/img/azure-administrator-associate-600x600.png)
      ![](./assets/img/AWS-SolArchitect-Associate-2020.png)
      ![](./assets/img/1_LFCS-600x600.png)
-     ![](./assets/img/cisco_ccna_R_26S.png)    
-     
+     ![](./assets/img/cisco_ccna_R_26S.png)   
+
      ![](./assets/img/cisco_ccnp_R_26S.png)
      ![](./assets/img/vmware_Cert_P_DCV6.5.png)
      ![](./assets/img/MCSA-Windows_Server_2016.png)
-     ![](./assets/img/MCSE-Core_Infrastructure.png)
+     ![](./assets/img/MCSE-Core_Infrastructure.png)   
 
 - **Infrastructure & virtualisation expert** - Proficient in Active Directory (AD), Group Policy, DNS, DHCP, ADFS, PKI Certificates, SCCM SOE Imaging + app packaging, MDM (AirWatch, MaaS360), storage (SAN / NAS) & backup (Rubrik) systems, networking and virtualisation (VMware / Hyper-V). 
 
