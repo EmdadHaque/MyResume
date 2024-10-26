@@ -24,7 +24,6 @@ title: Career Profile
      ![](./assets/img/vmware_Cert_P_DCV6.5.png)
      ![](./assets/img/MCSA-Windows_Server_2016.png)
      ![](./assets/img/MCSE-Core_Infrastructure.png)
-     {: .image-row}
 
 - **Infrastructure & virtualisation expert** - Proficient in Active Directory (AD), Group Policy, DNS, DHCP, ADFS, PKI Certificates, SCCM SOE Imaging + app packaging, MDM (AirWatch, MaaS360), storage (SAN / NAS) & backup (Rubrik) systems, networking and virtualisation (VMware / Hyper-V). 
 
