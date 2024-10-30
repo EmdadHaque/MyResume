@@ -15,6 +15,6 @@
    The aim of this project is to install applications on Windows VMs in Azure via PowerShell scripts in the absence of any configuration management tools.
 
 &nbsp;
-- **[RDP / Log in to Azure VM that is not connected to any AD using MS Entra ID credentials](./rdp_to_azure_vm_with_entra_id)**
+- **[RDP / Log in to Azure VM that is not connected to any AD using MS Entra ID credentials](./projects/rdp_to_azure_vm_with_entra_id)**
 
    In this project, Azure VPN and MS Entra ID with the built-in MFA are used to secure the Remote Desktop Connection to an Azure VPN.
