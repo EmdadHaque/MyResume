@@ -39,7 +39,7 @@ This solution could be replaced by _Azure Virtual Desktops_ which would be a mor
 
 - To control who can RDP to the VM as a standard user or as an administrator, use the built-in roles _Virtual Machine User Login_ and _Virtual Machine Administrator Login_ respectively. Go to VM > _Access Control (IAM)_ > _Add Role Assignment_ > Select one of the above roles and the user or group you wish to have this role.
 
-- To add MFA prompt for the RDP access, create a Conditional Policy that Grants access to Resources when MFA requirement is met.
+- To add MFA prompt for the RDP access, create a **Conditional Policy** that Grants access to Users for All Resources when the MFA Requirement is met.
 
 - To RDP to the VM:
     - Connect to the Azure VPN from your local device.
@@ -55,7 +55,7 @@ This solution could be replaced by _Azure Virtual Desktops_ which would be a mor
     ![](/assets/img/projects/rdp_entra_id/rdp_prompt.png) 
 
 
-You should now be connected to access the Azure VM via RDP using the Entra ID credentials and MFA. Hope this was useful. 
+You should now be able to access the Azure VM via RDP using the Entra ID credentials and MFA. Hope this was helpful.  
 
 ---
 &nbsp;
