@@ -5,7 +5,7 @@ _Date: 10 Oct 2024_
 
 **Aim**: To install applications on Windows VMs in Azure via scripts in the absence of any configuration management tools.   
 
-**Scenario**: The environment has multiple Windows VMs in Azure which are not being managed by any Configuration Management tools, most are also not connected to AD. 
+**Scenario**: The environment has multiple Windows VMs in Azure which are not being managed by any Configuration Management tools, most are also not connected to Active Directory (AD). 
 
 **Requirement**: Deploy an app to the Azure VMs in an automated way instead of logging into each VM and manually installing the app.
 
@@ -14,7 +14,7 @@ _Date: 10 Oct 2024_
 There are several ways to do this:
 
    - **VM Applications**
-      - This is a built-in feature for Azure VMs
+      - This is a built-in feature for Azure VMs which allows installation of applications via the VM App Extension. This can be used to add apps when creating a VM or to existing VMs, using the Azure Portal and PowerShell.
 
    - **Run Commands** 
       - This is the modern way of deploying apps at the time of writing.
@@ -29,7 +29,7 @@ There are several ways to do this:
       - This needs time to set up the tool, and the tools have their own limitations as well.
 
    - **Group Policy** 
-      - This requires that the VMs added to AD.
+      - This requires that the VMs are added to AD.
 
 &nbsp; 
 
