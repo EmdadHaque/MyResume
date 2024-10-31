@@ -1,6 +1,6 @@
 
 
-## RDP / Log in to Azure VM using MS Entra ID credentials
+## RDP to an Azure VM using MS Entra ID credentials
 _Date: 30 Oct 2024_  
 
 **Scenario**: The environment has Windows VMs in Azure which are not connected to AD and need to be accessed via RDP. This is mainly going to be used by external partners.  
@@ -26,33 +26,36 @@ This solution could be replaced by _Azure Virtual Desktops_ which would be a mor
 
 ### Steps:
 
-1. When creating the VM, ensure that you select the _"Login with Entra ID"_ under the _Management_ tab.
+- When creating the VM, ensure that you select the _"Login with Entra ID"_ under the _Management_ tab.
 
-![](/assets/img/projects/rdp_entra_id/login_with_entra_id.png)
+    ![](/assets/img/projects/rdp_entra_id/login_with_entra_id.png)
 
-Once the VM is created, under the VM's "Extensions" you will notice the "AADLoginForWindows" extension, which will allow the RDP via Entra ID.
+    Once the VM is created, under the VM's "Extensions" you will notice the "AADLoginForWindows" extension, which will allow the RDP via Entra ID.
 
-![](/assets/img/projects/rdp_entra_id/vm_ext_aadlogin.png)
+    ![](/assets/img/projects/rdp_entra_id/vm_ext_aadlogin.png)
 
-2. If the VM is not connected to AD, add the DNS Suffix of the network to your VM's hostname at the OS level.
-![](/assets/img/projects/rdp_entra_id/vm_dns_suffix.png)
+- If the VM is not connected to AD, add the DNS Suffix of the network to your VM's hostname at the OS level.
+    ![](/assets/img/projects/rdp_entra_id/vm_dns_suffix.png)
 
-3. To control who can RDP to the VM as a standard user or as an administrator, use the built-in roles _Virtual Machine User Login_ and _Virtual Machine Administrator Login_ respectively. Go to VM > _Access Control (IAM)_ > _Add Role Assignment_ > Select one of the above roles and the user or group you wish to have this role.
+- To control who can RDP to the VM as a standard user or as an administrator, use the built-in roles _Virtual Machine User Login_ and _Virtual Machine Administrator Login_ respectively. Go to VM > _Access Control (IAM)_ > _Add Role Assignment_ > Select one of the above roles and the user or group you wish to have this role.
 
-4. To add MFA prompt for the RDP access, create a Conditional Policy that Grants access to Resources when MFA requirement is met.
+- To add MFA prompt for the RDP access, create a Conditional Policy that Grants access to Resources when MFA requirement is met.
 
-5. To RDP to the VM:
-    a. Connect to the Azure VPN from your local device.
-    b. Open Remote Desktop Connection app from your local device and from the Advanced tab, select _"Use a web account to sign in to the remote computer"_ ![](/assets/img/projects/rdp_entra_id/rdc_web_account.png)
-    c. Add the remote computer's FQDN
-    d. Enter the username, password and MFA code when you the MS Entra ID modern authentication credential prompt. 
-    E. Select _Yes_ when prompted to _Allow remote desktop connection?_ ![](/assets/img/projects/rdp_entra_id/rdp_prompt.png) 
-
+- To RDP to the VM:
+    - Connect to the Azure VPN from your local device.
+    - Open Remote Desktop Connection app from your local device and from the Advanced tab, select _"Use a web account to sign in to the remote computer"_ 
+    ![](/assets/img/projects/rdp_entra_id/rdc_web_account.png)
+    - Add the remote computer's FQDN
+    - Enter the username, password and MFA code when you the MS Entra ID modern authentication credential prompt. 
+    - Select _Yes_ when prompted to _Allow remote desktop connection?_
+    ![](/assets/img/projects/rdp_entra_id/rdp_prompt.png) 
 
 
 &nbsp;
+---
 
-Hope this was useful. 
+
+You should now be connected to access the Azure VM via RDP using the Entra ID credentials and MFA. Hope this was useful. 
 
 &nbsp;
 
