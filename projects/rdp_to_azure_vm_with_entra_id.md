@@ -47,16 +47,13 @@ This solution could be replaced by _Azure Virtual Desktops_ which would be a mor
     ![](/assets/img/projects/rdp_entra_id/rdc_web_account.png)
     - Add the remote computer's FQDN
     - Enter the username, password and MFA code when you the MS Entra ID modern authentication credential prompt. 
-    - Select _Yes_ when prompted to _Allow remote desktop connection?_
+    - Select _Yes_ when prompted to _Allow remote desktop connection?_ 
     ![](/assets/img/projects/rdp_entra_id/rdp_prompt.png) 
-
-
-&nbsp;
----
 
 
 You should now be connected to access the Azure VM via RDP using the Entra ID credentials and MFA. Hope this was useful. 
 
+---
 &nbsp;
 
 [Back to Project List](../projects) &emsp; &emsp; &emsp; [Back to Top](#top)
