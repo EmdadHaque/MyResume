@@ -21,7 +21,7 @@ This solution could be replaced by _Azure Virtual Desktops_ which would be a mor
 
 ### Prerequisites: 
 
-- Set up an Azure Point-to-Site VPN because the VMs will not have public IPs. Follow this [link](https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-creating-an-azure-point-to-site-vpn/ba-p/326264){:target="_blank"} to set up the VPN.
+- Set up an Azure Point-to-Site VPN because the VMs will not have public IPs. Follow the steps in this [link](https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-creating-an-azure-point-to-site-vpn/ba-p/326264){:target="_blank"} to set up the VPN.
 
 
 ### Steps:
