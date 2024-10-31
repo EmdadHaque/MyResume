@@ -20,4 +20,4 @@ title: Project Portfolio
 &nbsp;
 - **[RDP to an Azure VM using MS Entra ID credentials](./projects/rdp_to_azure_vm_with_entra_id)**
 
-   In this project, Azure VPN and MS Entra ID with the built-in MFA are used to secure the Remote Desktop Connection to an Azure VPN.
+   In this project, Azure VPN and MS Entra ID with the built-in MFA are used to secure the Remote Desktop Connection to an Azure VM.
