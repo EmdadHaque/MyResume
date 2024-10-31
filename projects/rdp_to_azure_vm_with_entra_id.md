@@ -35,6 +35,7 @@ This solution could be replaced by _Azure Virtual Desktops_ which would be a mor
     ![](/assets/img/projects/rdp_entra_id/vm_ext_aadlogin.png)
 
 - If the VM is not connected to AD, add the DNS Suffix of the network to your VM's hostname at the OS level. 
+    
     ![](/assets/img/projects/rdp_entra_id/vm_dns_suffix.png)
 
 - To control who can RDP to the VM as a standard user or as an administrator, use the built-in roles _Virtual Machine User Login_ and _Virtual Machine Administrator Login_ respectively. Go to VM > _Access Control (IAM)_ > _Add Role Assignment_ > Select one of the above roles and the user or group you wish to have this role.
