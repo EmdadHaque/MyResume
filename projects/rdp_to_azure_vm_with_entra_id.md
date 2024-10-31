@@ -43,10 +43,14 @@ This solution could be replaced by _Azure Virtual Desktops_ which would be a mor
 
 - To RDP to the VM:
     - Connect to the Azure VPN from your local device.
+
     - Open Remote Desktop Connection app from your local device and from the Advanced tab, select _"Use a web account to sign in to the remote computer"_ 
     ![](/assets/img/projects/rdp_entra_id/rdc_web_account.png)
+    
     - Add the remote computer's FQDN
+    
     - Enter the username, password and MFA code when you the MS Entra ID modern authentication credential prompt. 
+    
     - Select _Yes_ when prompted to _Allow remote desktop connection?_ 
     ![](/assets/img/projects/rdp_entra_id/rdp_prompt.png) 
 
