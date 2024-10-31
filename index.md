@@ -1,6 +1,3 @@
----
-title: Career Profile
----
 
 ### PROJECT PORTFOLIO
 
