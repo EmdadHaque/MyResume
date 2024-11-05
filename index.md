@@ -2,13 +2,6 @@
 title: About Me
 ---
 
-
-### PROJECT PORTFOLIO
-
-- **[Click here to view my project portfolio](./projects)**
-
-<br />
-
 ### CAREER PROFILE
 
 - 12+ years of **IT Systems Administration & Support experience** experience in designing, managing and troubleshooting on-prem and cloud environments involving Windows & Linux servers & workstations, virtualisation, specialised applications, security, printing, storage, backup & networking solutions. 
@@ -37,6 +30,13 @@ title: About Me
 - **Incident manager** - Resolved escalated incidents with permanent solutions whenever possible reducing incident count while using ServiceNow, ZenDesk, Salesforce / Hermes and JIRA.
 
 - **Excellent communicator** - Delivering exceptional customer service and liaising with vendors. Experienced at developing documentation and training material. 
+
+&nbsp;
+
+### PROJECT PORTFOLIO
+
+- Recently, I have started curating some of the work I have been involved in. **[Click here to view my project portfolio](./projects)**
+
 
 &nbsp;
 
