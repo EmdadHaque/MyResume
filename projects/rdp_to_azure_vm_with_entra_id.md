@@ -58,7 +58,8 @@ This solution could be replaced by _Azure Virtual Desktops_ which would be a mor
 
 You should now be able to access the Azure VM via RDP using the Entra ID credentials and MFA over a VPN connection. Hope this was helpful.  
 
----
 &nbsp;
+
+---
 
 [Back to Project List](../projects) &emsp; &emsp; &emsp; [Back to Top](#top)
