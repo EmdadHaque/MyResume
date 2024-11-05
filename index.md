@@ -38,7 +38,8 @@ title: About Me
 
 - **Excellent communicator** - Delivering exceptional customer service and liaising with vendors. Experienced at developing documentation and training material. 
 
----
 &nbsp;
+
+---
 
 [Back to Top](#top)
