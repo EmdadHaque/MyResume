@@ -80,6 +80,10 @@ If rejected by approver, send a rejection email to requester.
 ![](/assets/img/projects/jit_access/logic-app-http.png)
 
 
+## Securing the solution
+
+
+
 ---
 
 
@@ -88,9 +92,7 @@ If rejected by approver, send a rejection email to requester.
 
 &nbsp;
 
-Hope this was useful. 
-
-I aim to add information on using Azure Automation Runbooks and Custom Script Extensions to deploy apps in a future update.
+I hope this was informational and helps you build your own secure solution based on the guidelines demonstrated here. 
 
 &nbsp;
 
