@@ -88,6 +88,14 @@ If rejected by approver, send a rejection email to requester.
 
    - The **Logic App** has been assigned a System-Assigned Managed Identity.
       A custom role has been created that only allows for requesting JIT access.
+
+      The role has enough permissions to only request JIT access to a VM as described in [MS Learn - Enable just-in-time access on VMs - Prerequisites](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage#prerequisites):
+         - Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action
+         - Microsoft.Security/locations/jitNetworkAccessPolicies/*/read
+         - Microsoft.Compute/virtualMachines/read
+         - Microsoft.Network/networkInterfaces/*/read
+         - Microsoft.Network/publicIPAddresses/read
+
       The manged identity has been assigned to this role at the Landing Zone Management Group which comprises all subscriptions with business workloads.    
 
 ---
