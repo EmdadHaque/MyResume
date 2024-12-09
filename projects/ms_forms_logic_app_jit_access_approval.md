@@ -76,6 +76,31 @@ Send an Approval Email to an approver or a group of approvers.
 
 When Approval is received, use an HTTP request to create the JIT RDP Access and send a confirmation email to the requester.
 
+URI:
+   ```
+   https://management.azure.com/subscriptions/0e1ac160-9f13-4949-9206-a8928802fb38/resourceGroups/@{variables('var-rg')}/providers/Microsoft.Security/locations/australiaeast/jitNetworkAccessPolicies/default/initiate?api-version=2020-01-01
+   ```
+
+Method: POST
+
+Body:
+   ```
+   {
+      "virtualMachines": [
+         {
+            "id": "/subscriptions/0e1ac160-9f13-4949-9206-a8928802fb38/resourceGroups/@{variables('var-rg')}/providers/Microsoft.Compute/virtualMachines/@{variables('var-vm')}",
+            "ports": [
+               {
+                  "number": 3389,
+                  "duration": "PT24H",
+                  "allowedSourceAddressPrefix": "@{variables('var-ip')}"
+               }
+            ]
+         }
+      ]  
+   }
+   ```
+
 If rejected by approver, send a rejection email to requester.
 
 ![](/assets/img/projects/jit_access/logic-app-http.png)
@@ -89,23 +114,20 @@ If rejected by approver, send a rejection email to requester.
 
    - The **Logic App** has been assigned a System-Assigned Managed Identity.
      
-     A custom role has been created that only allows for requesting JIT access.
+     A custom role has been created that only allows for requesting JIT access to a VM as described in [MS Learn - Enable just-in-time access on VMs - Prerequisites](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage#prerequisites):
 
-     The role has enough permissions to only request JIT access to a VM as described in [MS Learn - Enable just-in-time access on VMs - Prerequisites](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage#prerequisites):
-     
          - Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action
          - Microsoft.Security/locations/jitNetworkAccessPolicies/*/read
          - Microsoft.Compute/virtualMachines/read
          - Microsoft.Network/networkInterfaces/*/read
          - Microsoft.Network/publicIPAddresses/read
 
-      The manged identity has been assigned to this role at the Landing Zone Management Group which comprises all subscriptions with business workloads.    
+      The manged identity has been assigned to this role at the Landing Zone Management Group that encompasses all subscriptions with business workload VMs.    
 
 ---
 
 &nbsp;
-
-I hope this was informational and helps you build your own secure solution based on the guidelines demonstrated here. 
+I hope this was informational and helps you build your own secure solution based on the steps demonstrated here. 
 
 &nbsp;
 
