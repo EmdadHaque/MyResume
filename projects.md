@@ -21,3 +21,8 @@ title: Project Portfolio
 - **[RDP to an Azure VM using MS Entra ID credentials](./projects/rdp_to_azure_vm_with_entra_id)**
 
    In this project, Azure VPN and MS Entra ID with the built-in MFA are used to secure the Remote Desktop Connection to an Azure VM.
+   
+&nbsp;
+- **[Automate JIT RDP Access and Approvals to Azure VMs with MS Forms and Azure Logic Apps ](./projects/ms_forms_logic_app_jit_access_approval)**
+
+   Here, I have demonstrated how to use M365 Forms to collect end-user responses to trigger an Azure Logic App, which in turn, securely creates the JIT Access after the request has been approved by an approver. The user is also notified via email of confirmation or rejection of their email.
