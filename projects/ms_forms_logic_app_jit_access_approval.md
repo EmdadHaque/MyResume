@@ -83,13 +83,16 @@ If rejected by approver, send a rejection email to requester.
 
 ## Securing the solution
 
-   - The **MS Forms** has been secured using settings such that only users who are part of the Entra ID Tenant can access the Form. 
-      This can be further restrcited to a specific group of users in the Entra ID.
+   - The **MS Forms** has been secured using settings such that only users who are part of the Entra ID Tenant can access the Form.
+
+     This can be further restrcited to a specific group of users in the Entra ID.
 
    - The **Logic App** has been assigned a System-Assigned Managed Identity.
-      A custom role has been created that only allows for requesting JIT access.
+     
+     A custom role has been created that only allows for requesting JIT access.
 
-      The role has enough permissions to only request JIT access to a VM as described in [MS Learn - Enable just-in-time access on VMs - Prerequisites](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage#prerequisites):
+     The role has enough permissions to only request JIT access to a VM as described in [MS Learn - Enable just-in-time access on VMs - Prerequisites](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage#prerequisites):
+     
          - Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action
          - Microsoft.Security/locations/jitNetworkAccessPolicies/*/read
          - Microsoft.Compute/virtualMachines/read
