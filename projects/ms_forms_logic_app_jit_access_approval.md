@@ -75,6 +75,7 @@ Send an Approval Email to an approver or a group of approvers.
 ![](/assets/img/projects/jit_access/logic-app-approval-details.png)
 
 When Approval is received, use an HTTP request to create the JIT RDP Access and send a confirmation email to the requester.
+
 If rejected by approver, send a rejection email to requester.
 
 ![](/assets/img/projects/jit_access/logic-app-http.png)
@@ -82,11 +83,12 @@ If rejected by approver, send a rejection email to requester.
 
 ## Securing the solution
 
+   - The **MS Forms** has been secured using settings such that only users who are part of the Entra ID Tenant can access the Form. 
+      This can be further restrcited to a specific group of users in the Entra ID.
 
-
----
-
-
+   - The **Logic App** has been assigned a System-Assigned Managed Identity.
+      A custom role has been created that only allows for requesting JIT access.
+      The manged identity has been assigned to this role at the Landing Zone Management Group which comprises all subscriptions with business workloads.    
 
 ---
 
