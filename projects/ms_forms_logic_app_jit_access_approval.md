@@ -13,54 +13,36 @@ The goal is to automate this so that end users can request the JIT access that f
 
 **Background**: 
 
-JIT access to Azure VMs is a feature of MS Defender for Cloud. You can learn more about it from [MS documentation](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-overview?tabs=defender-for-container-arch-aks).
+JIT access to Azure VMs is a feature of MS Defender for Cloud. You can learn more about it from [MS Learn - Understanding just-in-time (JIT) VM access](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-overview?tabs=defender-for-container-arch-aks).
 
-&nbsp; 
-
-The process to enable JIT is described in this [MS documentation](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage). 
+The process to enable JIT is described in this [MS Learn - Enable just-in-time access on VMs](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage). 
 In short, an Azure admin will set up the Azure VM to be protected by JIT and create rules for the JIT access policy. For example, a rule for port 3389 will be set up for RDP access. After that, roles with the correct permission can provide JIT access by using the rule and specifying the parameters like source IP, protocol, request time (duration).
 
-This create a temporary rule on the Network Security Group (NSG) attached to the specified VM allowing traffic for the requested parameters in the JIT request. 
+This creates a temporary rule on the Network Security Group (NSG) attached to the specified VM allowing traffic for the requested parameters in the JIT request. 
 
 &nbsp; 
 
 Below, I have discussed in details how I have automated the process so that this JIT access is enabled when an end user's JIT request is received and approved.
+A summary of the steps is listed:
+   - M365 Forms is used to gather the parameters for the JIT access from end-users. 
+   - Form submission triggers an Azure Logic App
+   - The Logic App sends Approval email notifications to approvers
+   - Approvers can approve or reject directly from the email itself
+   - Based on the approval decision and the JIT parameters, the Logic App creates the JIT access and sends a notification email of the outcome to the end-user/requestor.
 
 &nbsp;
 
-## Using VM Applications
+## Using MS Forms 
 
-   Prerequisites: 
+   - Create a M365 Form. For demo purposes, I am using only 2 VMs and only asking for the public IP that needs to be allowlisted. We can ask for other details such as RDP or SSH or some other port, time and duration etc. 
 
-   - Create a **Storage Account** where we store the application installation source files
+   ![](/assets/img/projects/jit_access/ms-form-fields.png)
 
-   Steps:
+   - For security, I have allowed only people from my Entra ID tenant to access the form i.e. users will require to sign-in to access the form. This can be further locked down to a group of users who can access the form. 
+
+   ![](/assets/img/projects/jit_access/ms-form-settings.png)
+
    
-   1. From the Azure Portal, browse to your Storage Account and upload the MSI file to a container as a Block Blob.
-   
-   2. Generate a **SAS** for the MSI file's blob with "Read" permissions and an appropriate time duration. Take a note of the generated SAS URL.
-
-   3. Open **Azure Compute Gallery** and create a Compute Gallery. The Compute Gallery is used to contain the application definition and versions.
-
-   4. In your Compute Gallery, add a **VM Application Definition**. Enter the app's name, region (use the same region as your VMs) and OS type (Windows).
-
-   5. In your App Definition, add an **Application Version** for example "2.4.08".
-      - For the **version number** use the version in the dot format (e.g. 2.4.08). 
-      - For the **source application package**, use the SAS URL for the MSI file from the Storage Account. 
-      - For the **install script**, use the sample command below. The move command is used to rename the downloaded MSI file as it is downloaded as the application name instead of the MSI file name:
-
-      ```shell
-      move .\\7zip .\\7zip_2408.msi & start /wait %windir%\\system32\\msiexec.exe /i 7zip_2408.msi /quiet /norestart /L*V 7zip_2408_install.log
-      ```
-
-      - For the **uninstall script** use the sample command below:
-
-      ```shell
-      msiexec.exe /x {23170F69-40C1-2702-2408-000001000000} /quiet /norestart /L*V 7zip_2408_uninstall.log
-      ```
-
-   6. Once the App Version is created, browse to a running VM in the same region as the Application.  
-      - Select _Extensions and Applications_ > _VM Applications_ > _Add Application_ > Select the app (7zip and it's version) and click Save.
    
 ---
 
