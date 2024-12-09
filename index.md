@@ -2,13 +2,6 @@
 title: About Me
 ---
 
-
-### PROJECT PORTFOLIO
-
-- **[Click here to view my project portfolio](./projects)**
-
-<br />
-
 ### CAREER PROFILE
 
 - 12+ years of **IT Systems Administration & Support experience** experience in designing, managing and troubleshooting on-prem and cloud environments involving Windows & Linux servers & workstations, virtualisation, specialised applications, security, printing, storage, backup & networking solutions. 
@@ -26,15 +19,27 @@ title: About Me
      ![](./assets/img/MCSA-Windows_Server_2016.png)
      ![](./assets/img/MCSE-Core_Infrastructure.png)   
 
-- **Infrastructure & virtualisation expert** - Proficient in Active Directory (AD), Group Policy, DNS, DHCP, ADFS, PKI Certificates, SCCM SOE Imaging + app packaging, MDM (AirWatch, MaaS360), storage (SAN / NAS) & backup (Rubrik) systems, networking and virtualisation (VMware / Hyper-V). 
+- **Infrastructure & virtualisation expert** - Proficient in Active Directory (AD), Group Policy, DNS, DHCP, ADFS, PKI Certificates, SCCM SOE Imaging + app packaging, MDM (Intune, AirWatch, MaaS360), storage (SAN / NAS) & backup (Rubrik) systems, networking and virtualisation (VMware / Citrix / Hyper-V). 
 
-- **Cloud technologist** - Experienced with administration of AWS & Azure cloud infrastructure including multi-region replication, backups, disaster-recovery, SSO, MFA, monitoring, audits and cost management plus migrations and on-prem sync.  M365 / Office365 expertise including Exchange, SharePoint, Teams, PowerBI & Dynamics administration & licensing.
+- **Cloud technologist** - Experienced with administration of AWS & Azure cloud infrastructure including identity management, multi-region replication, backups, disaster-recovery, SSO, MFA, monitoring, audits and cost management plus migrations and on-prem sync.  M365 / Office365 expertise including Exchange, SharePoint, Teams, PowerBI & Dynamics administration & licensing.
 
-- **Automation specialist** - Skilled at automating deployments and configurations using PowerShell, PowerCLI, Python, VB and BASH scripting and IaC tools (CloudFormation, ARM, Terraform). Developed desktop and web apps using various programming languages and DBs. 
+- **Automation specialist** - Skilled at automating deployments and configurations using PowerShell, PowerCLI, Python, VB and BASH scripting and IaC tools (CloudFormation, ARM, Terraform). Developed desktop and web apps using various programming languages and DB types. 
 
-- **Networking know-how** - Cisco CCNA and CCNP certified network engineer, accustomed with configuring routing, switching, firewalls, ACLs, proxies and IP telephones.
+- **Networking know-how** - Cisco CCNA and CCNP certified network engineer, accustomed with configuring VPN, routing, switching, firewalls, ACLs, proxies and IP telephones.
 
-- **Incident manager** - Resolved escalated incidents with permanent solutions whenever possible reducing incident count while using ServiceNow, Salesforce / Hermes and JIRA.
+- **Incident manager** - Resolved escalated incidents with permanent solutions whenever possible reducing incident count while using ServiceNow, ZenDesk, Salesforce / Hermes and JIRA.
 
 - **Excellent communicator** - Delivering exceptional customer service and liaising with vendors. Experienced at developing documentation and training material. 
 
+&nbsp;
+
+### PROJECT PORTFOLIO
+
+- Recently, I have started curating some of the work I have been involved in. **[Click here to view my project portfolio](./projects)**
+
+
+&nbsp;
+
+---
+
+[Back to Top](#top)
