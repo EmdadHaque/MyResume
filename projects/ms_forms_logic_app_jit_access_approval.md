@@ -109,7 +109,7 @@ https://management.azure.com/subscriptions/<sub-id>/resourceGroups/@{variables('
 }
 ```
 
-- If rejected by approver, send a rejection email to requester. 
+- If rejected by approver, send a rejection email to requester.    
 The confirmation and rejection emails are just simple notification emails without any options unlike the Approval email.
 
 ![](/assets/img/projects/jit_access/logic-app-rejection.png)
