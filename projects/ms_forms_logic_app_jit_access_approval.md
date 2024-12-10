@@ -81,7 +81,7 @@ Create a Logic App and use the Logic App Designer to create the app logic as fol
 
 URI:
    ```
-   https://management.azure.com/subscriptions/0e1ac160-9f13-4949-9206-a8928802fb38/resourceGroups/@{variables('var-rg')}/providers/Microsoft.Security/locations/australiaeast/jitNetworkAccessPolicies/default/initiate?api-version=2020-01-01
+   https://management.azure.com/subscriptions/<sub-id>/resourceGroups/@{variables('var-rg')}/providers/Microsoft.Security/locations/<az-region>/jitNetworkAccessPolicies/default/initiate?api-version=2020-01-01
    ```
 
 Method: POST
@@ -91,7 +91,7 @@ Body:
    {
       "virtualMachines": [
          {
-            "id": "/subscriptions/0e1ac160-9f13-4949-9206-a8928802fb38/resourceGroups/@{variables('var-rg')}/providers/Microsoft.Compute/virtualMachines/@{variables('var-vm')}",
+            "id": "/subscriptions/<sub-id>/resourceGroups/@{variables('var-rg')}/providers/Microsoft.Compute/virtualMachines/@{variables('var-vm')}",
             "ports": [
                {
                   "number": 3389,
