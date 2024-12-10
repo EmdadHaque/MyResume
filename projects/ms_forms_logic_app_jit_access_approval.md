@@ -3,18 +3,18 @@
 ## Automate JIT RDP Access and Approvals to Azure VMs with MS Forms and Azure Logic Apps  
 _Date: 6 Dec 2024_
 
-**Scenario**: In this environment, end users often require RDP access to a specific Azure VMs that are publicly available i.e. acting as bastion hosts. Moreover, the access requirement is temporary. 
+**Scenario**: In this environment, end users often require RDP access to specific Azure VMs that are publicly available i.e. acting as bastion hosts. Moreover, the access requirement is temporary. 
 
-**Requirement**: For security hardening, only Just-In-Time (JIT) RDP access needs to be provided in order to lock down the access to a specific public IP, for a specific duration, and to ensure the request is approved first.
+**Requirement**: For security hardening, only Just-In-Time (JIT) RDP access needs to be provided in order to lock down the access to a specific public IP for a specific duration, and to ensure the request is approved first.
 
 **Aim**: 
-Currently, users create a ticket for RDP access to a specific Azure VM and provide their pubic IP that needs to be allow-listed. 
+Currently, the end-user creates a ticket for RDP access to a specific Azure VM and provides their pubic IP that needs to be allow-listed. 
 
-This ticket gets triaged to the Azure admin team who evaluate the request and create the JIT access to the VM from the Azure Portal or via CLI. 
+This ticket gets assigned to the Azure Admin team, who evaluate the request and create the JIT access to the VM using the Azure Portal or CLI. 
 
-As you can imagine, the manual process is slow as it it done manually and dependent on an Azure admin's availability.
+As you can imagine, this manual process is slow and dependent on an Azure Admin's availability.
 
-The goal is to automate this so that end users can request the JIT access that forces them to provide the required information like the public IP they will access from, and an approver (who can be a non-admin user) can allow it, so that the JIT access is provided without need for an admin user to get involved. 
+The goal is to automate this process in a way such that end-users can request the JIT access by providing the required information, and an approver (who can be a non-admin user) can allow it, so that the JIT access is provided without need for an admin user to get involved. 
 
 **Background**: 
 
@@ -22,20 +22,21 @@ JIT access to Azure VMs is a feature of MS Defender for Cloud. You can learn mor
 
 The process to enable JIT is described in this [MS Learn - Enable just-in-time access on VMs](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage). 
 
-In short, an Azure admin will set up the Azure VM to be protected by JIT and create rules for the JIT access policy. For example, a rule for port 3389 will be set up for RDP access. 
+In short, an Azure admin will set up the Azure VM to be protected by JIT and create rules for the JIT access policy. For example, a rule for allowing inbound traffic on port 3389 will be set up for RDP access. 
 
-After that, roles with the correct permission can provide JIT access by using the rule and specifying the parameters like source IP, protocol, request time (duration).
+After that, a user with the correct role/permissions can provide JIT access by using the rule and specifying the parameters like source IP, protocol, request time (duration).
 
 This creates a temporary rule on the Network Security Group (NSG) attached to the specified VM allowing traffic for the requested parameters in the JIT request. 
 &nbsp; 
-Below, I have discussed in details how I have automated the process so that this JIT access is enabled when an end user's JIT request is received and approved.
+Below, I have discussed in details how I have automated the process so that the JIT access rule is enabled when an end-user's JIT request is received and approved.
 
 A summary of the steps is listed:
-   - M365 Forms is used to gather the parameters for the JIT access from end-users. 
-   - Form submission triggers an Azure Logic App
-   - The Logic App sends Approval email notifications to approvers
+   - A M365 Form is used to collect the parameters for the JIT access from end-users
+   - Every Form submission triggers an Azure Logic App
+   - The Logic App sends an Approval notifications to approvers via email
    - Approvers can approve or reject directly from the email itself
-   - Based on the approval decision and the JIT parameters, the Logic App creates the JIT access and sends a notification email of the outcome to the end-user/requestor.
+   - Based on the approval decision and the JIT parameters, the Logic App creates the JIT access 
+   - The Logic app then sends a notification email of the outcome to the end-user/requestor.
 
 &nbsp;
 
@@ -43,9 +44,9 @@ A summary of the steps is listed:
 
 - Create a M365 Form. 
 
-For demo purposes, I am using only 2 VMs and only asking for the public IP that needs to be allowlisted. 
+For demo purposes, I am using 2 VMs and only asking for the public IP that needs to be allowlisted. 
 
-We can ask for other details such as RDP or SSH or some other port, time and duration etc. 
+We can ask for other details such as justification, RDP or SSH or some other port, time and duration etc. 
 
    ![](/assets/img/projects/jit_access/ms-form-fields.png)
 
