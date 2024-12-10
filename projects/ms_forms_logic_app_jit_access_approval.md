@@ -127,11 +127,11 @@ The confirmation and rejection emails are just simple notification emails withou
      A custom role has been created that only allows for requesting JIT access to a VM as described in [MS Learn - Enable just-in-time access on VMs - Prerequisites](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage#prerequisites):
 
       ```
-         - Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action
-         - Microsoft.Security/locations/jitNetworkAccessPolicies/*/read
-         - Microsoft.Compute/virtualMachines/read
-         - Microsoft.Network/networkInterfaces/*/read
-         - Microsoft.Network/publicIPAddresses/read
+      - Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action
+      - Microsoft.Security/locations/jitNetworkAccessPolicies/*/read
+      - Microsoft.Compute/virtualMachines/read
+      - Microsoft.Network/networkInterfaces/*/read
+      - Microsoft.Network/publicIPAddresses/read
       ```
 
       The manged identity has been assigned to this role at the Landing Zone Management Group that encompasses all subscriptions with business workload VMs.   
