@@ -135,6 +135,8 @@ The confirmation and rejection emails are just simple notification emails withou
       ```
 
       The manged identity has been assigned to this role at the Landing Zone Management Group that encompasses all subscriptions with business workload VMs.   
+
+      This managed identity is used for the HTTP request in the above step.
  
 ---
 &nbsp;    
