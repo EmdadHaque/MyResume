@@ -56,25 +56,28 @@ This can be further locked down to a group of users who can access the form.
 
 Create a Logic App and use the Logic App Designer to create the app logic as follows:
 
-Trigger the Logic App when a form response is submitted. 
+- Trigger the Logic App when a form response is submitted. 
 
 ![](/assets/img/projects/jit_access/logic-app-trigger.png)
 
-Initialise the parameters we are collecting from the Form into variables.
+- Initialise the parameters we are collecting from the Form into variables.
 
 ![](/assets/img/projects/jit_access/logic-app-vars.png)
 
-Depending on the VM name, select the Resource Group. The resource group of the VM needs to mentioned in the HTTP call when requesting JIT access as you can see in the later steps.
+- Depending on the VM name, select the Resource Group. 
+   The resource group of the VM needs to mentioned in the HTTP call when requesting JIT access as you can see in the later steps.
 
 ![](/assets/img/projects/jit_access/logic-app-set-rg.png)
 
-Send an Approval Email to an approver or a group of approvers.
+- Send an Approval Email to an approver or a group of approvers.
 
 ![](/assets/img/projects/jit_access/logic-app-approval.png)
 
 ![](/assets/img/projects/jit_access/logic-app-approval-details.png)
 
-When Approval is received, use an HTTP request to create the JIT RDP Access and send a confirmation email to the requester.
+- When Approval is received, use an HTTP request to create the JIT RDP Access and send a confirmation email to the requester.
+
+![](/assets/img/projects/jit_access/logic-app-http.png)
 
 URI:
    ```
@@ -101,9 +104,11 @@ Body:
    }
    ```
 
-If rejected by approver, send a rejection email to requester.
+- If rejected by approver, send a rejection email to requester. 
+The confirmation and rejection emails are just simple notification emails without any options unlike the Approval email.
 
-![](/assets/img/projects/jit_access/logic-app-http.png)
+![](/assets/img/projects/jit_access/logic-app-rejection.png)
+
 
 
 ## Securing the solution
