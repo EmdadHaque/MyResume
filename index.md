@@ -4,7 +4,7 @@ title: About Me
 
 ### CAREER PROFILE
 
-- 12+ years of **IT Systems Design, Administration & Support** experience in designing, managing and troubleshooting on-prem and cloud environments involving Windows & Linux servers & workstations, virtualisation, specialised applications, printing, storage, backup & networking solutions with Security being Priority 0.
+- 12+ years of **IT Systems Design, Administration & Support** experience with on-premises and cloud environments involving Windows & Linux servers & workstations, virtualisation, specialised applications, printing, storage, backup & networking solutions with Security getting Priority 0.
 
 - **Certifications** - Azure Adminstrator Associate, AWS Solutions Architect Associate, Microsoft MCSE MCSA MCP, Linux Foundation System Admin LFCSA, Vmware VCP-DCV, Cisco CCNA + CCNP 
 
