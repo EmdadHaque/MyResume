@@ -41,16 +41,21 @@ A summary of the steps is listed:
 
 ## Set up MS Forms 
 
-Create a M365 Form. 
-For demo purposes, I am using only 2 VMs and only asking for the public IP that needs to be allowlisted. We can ask for other details such as RDP or SSH or some other port, time and duration etc. 
+- Create a M365 Form. 
+
+For demo purposes, I am using only 2 VMs and only asking for the public IP that needs to be allowlisted. 
+
+We can ask for other details such as RDP or SSH or some other port, time and duration etc. 
 
    ![](/assets/img/projects/jit_access/ms-form-fields.png)
 
 For security, I have allowed only people from my Entra ID tenant to access the form i.e. users will require to sign-in to access the form. 
+
 This can be further locked down to a group of users who can access the form. 
 
    ![](/assets/img/projects/jit_access/ms-form-settings.png)
 
+&nbsp; 
 
 ## Set up a Logic App
 
@@ -79,14 +84,14 @@ Create a Logic App and use the Logic App Designer to create the app logic as fol
 
 ![](/assets/img/projects/jit_access/logic-app-http.png)
 
-URI:
+**URI**:
    ```
    https://management.azure.com/subscriptions/<sub-id>/resourceGroups/@{variables('var-rg')}/providers/Microsoft.Security/locations/<az-region>/jitNetworkAccessPolicies/default/initiate?api-version=2020-01-01
    ```
 
-Method: POST
+**Method**: POST
 
-Body:
+**Body**:
    ```
    {
       "virtualMachines": [
@@ -109,7 +114,7 @@ The confirmation and rejection emails are just simple notification emails withou
 
 ![](/assets/img/projects/jit_access/logic-app-rejection.png)
 
-
+&nbsp;
 
 ## Securing the solution
 
@@ -128,10 +133,9 @@ The confirmation and rejection emails are just simple notification emails withou
          - Microsoft.Network/publicIPAddresses/read
 
       The manged identity has been assigned to this role at the Landing Zone Management Group that encompasses all subscriptions with business workload VMs.    
-
 ---
+&nbsp;    
 
-&nbsp;
 I hope this was informational and helps you build your own secure solution based on the steps demonstrated here. 
 
 &nbsp;
