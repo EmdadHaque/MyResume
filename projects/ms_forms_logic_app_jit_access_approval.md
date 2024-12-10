@@ -85,29 +85,29 @@ Create a Logic App and use the Logic App Designer to create the app logic as fol
 ![](/assets/img/projects/jit_access/logic-app-http.png)
 
 **URI**:
-   ```
-   https://management.azure.com/subscriptions/<sub-id>/resourceGroups/@{variables('var-rg')}/providers/Microsoft.Security/locations/<az-region>/jitNetworkAccessPolicies/default/initiate?api-version=2020-01-01
-   ```
+```
+https://management.azure.com/subscriptions/<sub-id>/resourceGroups/@{variables('var-rg')}/providers/Microsoft.Security/locations/<az-region>/jitNetworkAccessPolicies/default/initiate?api-version=2020-01-01
+```
 
 **Method**: POST
 
 **Body**:
-   ```
-   {
-      "virtualMachines": [
-         {
-            "id": "/subscriptions/<sub-id>/resourceGroups/@{variables('var-rg')}/providers/Microsoft.Compute/virtualMachines/@{variables('var-vm')}",
-            "ports": [
-               {
-                  "number": 3389,
-                  "duration": "PT24H",
-                  "allowedSourceAddressPrefix": "@{variables('var-ip')}"
-               }
-            ]
-         }
-      ]  
-   }
-   ```
+```
+{
+   "virtualMachines": [
+      {
+         "id": "/subscriptions/<sub-id>/resourceGroups/@{variables('var-rg')}/providers/Microsoft.Compute/virtualMachines/@{variables('var-vm')}",
+         "ports": [
+            {
+               "number": 3389,
+               "duration": "PT24H",
+               "allowedSourceAddressPrefix": "@{variables('var-ip')}"
+            }
+         ]
+      }
+   ]  
+}
+```
 
 - If rejected by approver, send a rejection email to requester. 
 The confirmation and rejection emails are just simple notification emails without any options unlike the Approval email.
